@@ -1,23 +1,35 @@
 function updateTime(){
-//Los Angeles
-    let losAngelesElement = document.querySelector("#los-angeles");
-    if(losAngelesElement){
-    let losAngelesDateElement = losAngelesElement.querySelector(".date");
-    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-    let losAngelesTime = moment().tz('America/Los_Angeles');
-    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
-    losAngelesTimeElement.innerHTML = `${losAngelesTime.format('h:mm:ss [<small>]A[</small>]')}`;
+//Sao Paulo
+    let saoPauloElement = document.querySelector("#sao-paulo");
+    if(saoPauloElement){
+    let saoPauloDateElement = saoPauloElement.querySelector(".date");
+    let saoPauloTimeElement = saoPauloElement.querySelector(".time");
+    let saoPauloTime = moment().tz('America/Sao_Paulo');
+    saoPauloDateElement.innerHTML = saoPauloTime.format("MMMM Do YYYY");
+    saoPauloTimeElement.innerHTML = `${saoPauloTime.format('h:mm:ss [<small>]A[</small>]')}`;
 }
-//Sydney
+//Seoul
 
-    let sydneyElement = document.querySelector("#sydney");
-    if(sydneyElement){
-    let sydneyDateElement = sydneyElement.querySelector(".date");
-    let sydneyTimeElement = sydneyElement.querySelector(".time");
-    let sydneyTime = moment().tz('Australia/Sydney');
-    sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do YYYY");
-    sydneyTimeElement.innerHTML = `${sydneyTime.format('h:mm:ss [<small>]A[</small>]')}`;
-    }
+let seoulElement = document.querySelector("#seoul");
+if(seoulElement){
+let seoulDateElement = seoulElement.querySelector(".date");
+let seoulTimeElement = seoulElement.querySelector(".time");
+let seoulTime = moment().tz('Asia/Seoul');
+seoulDateElement.innerHTML = seoulTime.format("MMMM Do YYYY");
+seoulTimeElement.innerHTML = `${seoulTime.format('h:mm:ss [<small>]A[</small>]')}`;
+}
+
+//Stockholm
+
+let stockholmElement = document.querySelector("#stockholm");
+if(stockholmElement){
+let stockholmDateElement = stockholmElement.querySelector(".date");
+let stockholmTimeElement = stockholmElement.querySelector(".time");
+let stockholmTime = moment().tz('Europe/Stockholm');
+stockholmDateElement.innerHTML = stockholmTime.format("MMMM Do YYYY");
+stockholmTimeElement.innerHTML = `${stockholmTime.format('h:mm:ss [<small>]A[</small>]')}`;
+}
+
 }
 
 function updateCity(event){
